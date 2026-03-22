@@ -6,13 +6,16 @@ import './App.css'
 import Contador from './Components/Contador';
 import Ejemplo from './Components/useEffectEjemplo'
 import SimpleForm from './Components/forms/simpleForm'
+import Conditional from './Components/conditional/Conditional'
+import Products from './Components/lists/ProductList'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-    <SimpleForm/>
+    <Conditional/>
+    <Products/>
     </>
   )
 }
