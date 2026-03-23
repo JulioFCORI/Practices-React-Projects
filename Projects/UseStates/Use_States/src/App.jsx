@@ -8,15 +8,23 @@ import Ejemplo from './Components/useEffectEjemplo'
 import SimpleForm from './Components/forms/simpleForm'
 import Conditional from './Components/conditional/Conditional'
 import Products from './Components/lists/ProductList'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Contacto from './Components/pages/Contacto'
+import Inicio from './Components/pages/Inicio'
+import Producto from './Components/pages/Producto'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <>
-    <Conditional/>
-    <Products/>
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Inicio/>} />
+        <Route path="contacto" element={<Contacto/>} />
+        <Route path="producto/:id" element={<Producto/>}/>
+
+      </Routes>
+    </BrowserRouter>
   )
 }
 
